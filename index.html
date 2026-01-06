@@ -220,6 +220,25 @@
   text-decoration: none;
   font-weight: bold;
 }
+/* ===== STICKY HEADER ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.contact {
+  background: #ffffff;
+  color: #0F1E2E;
+  padding: 80px 20px;
+  text-align: center;
+}
+.footer {
+  background: #0F1E2E;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
 
   </style>
 </head>
@@ -243,6 +262,7 @@
       <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
     </nav>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
     <div class="header-call">
       <a href="tel:+17408183941">📞 Call Now</a>
@@ -397,6 +417,23 @@
 
   </div>
 </section>
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('.nav');
+    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+<section id="contact" class="contact">
+  <h2>Contact Precision Plumbing</h2>
+  <p>Athens, Ohio</p>
+  <a href="tel:+17408183941" class="call">
+    📞 Call (740) 818-3941
+  </a>
+</section>
+<footer class="footer">
+  © 2026 Precision Plumbing of Athens Ohio LLC<br>
+  Athens, Ohio • Licensed & Insured
+</footer>
 
 </body>
 </html>
