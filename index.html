@@ -1,439 +1,544 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Precision Plumbing of Athens Ohio LLC</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0F1E2E;
-      color: white;
-    }
-    .container {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h1 {
-      font-size: 48px;
-      line-height: 1.2;
-    }
-    h1 span {
-      color: #C9A24D;
-    }
-    p {
-      font-size: 18px;
-      margin: 20px 0;
-      opacity: 0.9;
-    }
-    .buttons a {
-      display: inline-block;
-      margin-right: 15px;
-      margin-top: 20px;
-      padding: 14px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .call {
-      background: #C9A24D;
-      color: white;
-    }
-    .callback {
-      border: 2px solid white;
-      color: white;
-    }
-    .badge {
-      display: inline-block;
-      background: #C9A24D;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-    .why {
-  background: #0F1E2E;
-  color: white;
-  padding: 90px 20px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Precision Plumbing of Athens Ohio LLC - Emergency plumbing, water heaters, drain cleaning, residential repairs.">
+<title>Precision Plumbing of Athens Ohio LLC</title>
+
+<style>
+
+/* =====================
+   GLOBAL VARIABLES
+===================== */
+:root{
+  --navy:#0F1E2E;
+  --navy-dark:#0B1623;
+  --gold:#C9A24D;
+  --light:#F7F7F5;
+  --text:#E6E6E6;
 }
 
-.why-container {
-  max-width: 1100px;
-  margin: auto;
+/* =====================
+   RESET & BASE
+===================== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-.why h2 {
-  font-size: 36px;
-  margin-bottom: 50px;
-  text-align: center;
+html{
+  scroll-behavior:smooth;
 }
 
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+body{
+  background:linear-gradient(180deg,var(--navy),#050A12);
+  color:white;
+  overflow-x:hidden;
+  line-height:1.6;
 }
 
-.why-item {
-  background: rgba(255,255,255,0.06);
-  padding: 30px;
-  border-radius: 14px;
+/* =====================
+   TOP BAR
+===================== */
+.top-bar{
+  background:#050A12;
+  color:#ddd;
+  font-size:14px;
+  padding:8px 20px;
+  text-align:center;
 }
 
-.why-item h3 {
-  margin-bottom: 12px;
-  color: #C9A24D;
+/* =====================
+   HEADER
+===================== */
+header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:rgba(15,30,46,.95);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.1);
 }
 
-.why-item p {
-  color: #E0E0E0;
-  line-height: 1.6;
-}
-/* ===== SERVICES ===== */
-.services {
-  background: #ffffff;
-  color: #0F1E2E;
-  padding: 90px 20px;
+.header-inner{
+  max-width:1300px;
+  margin:auto;
+  padding:18px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
-.services-container {
-  max-width: 1100px;
-  margin: auto;
-  text-align: center;
+.logo{
+  font-size:26px;
+  font-weight:bold;
 }
 
-.services h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
+.logo span{color:var(--gold)}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 14px;
+  font-weight:500;
 }
 
-.services-sub {
-  font-size: 18px;
-  margin-bottom: 50px;
-  color: #555;
+nav a:hover{color:var(--gold)}
+
+.header-call{
+  background:var(--gold);
+  color:white;
+  padding:12px 20px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+/* =====================
+   HERO SECTION
+===================== */
+.hero{
+  min-height:95vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  perspective:1200px;
 }
 
-.service-item {
-  background: #F4F6F8;
-  padding: 30px;
-  border-radius: 14px;
+.hero-card{
+  max-width:1000px;
+  background:linear-gradient(145deg,#13263C,#0B1623);
+  padding:90px 60px;
+  border-radius:28px;
+  box-shadow:0 50px 150px rgba(0,0,0,.6);
+  transform-style:preserve-3d;
+  transition:transform .3s ease;
 }
 
-.service-item h3 {
-  color: #C9A24D;
-  margin-bottom: 10px;
+.hero-card:hover{
+  transform:rotateY(6deg) rotateX(4deg);
 }
 
-/* ===== REVIEWS ===== */
-.reviews {
-  background: #0F1E2E;
-  color: white;
-  padding: 90px 20px;
+.hero-badge{
+  display:inline-block;
+  background:var(--gold);
+  padding:10px 18px;
+  border-radius:30px;
+  font-size:14px;
+  margin-bottom:25px;
 }
 
-.reviews-container {
-  max-width: 1100px;
-  margin: auto;
-  text-align: center;
+.hero h1{
+  font-size:56px;
+  line-height:1.15;
 }
 
-.reviews h2 {
-  font-size: 36px;
-  margin-bottom: 50px;
+.hero h1 span{color:var(--gold)}
+
+.hero p{
+  font-size:21px;
+  margin:30px 0;
+  max-width:800px;
+  color:var(--text);
 }
 
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+.hero-actions a{
+  display:inline-block;
+  margin-right:18px;
+  margin-top:20px;
+  padding:18px 34px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-.review-item {
-  background: rgba(255,255,255,0.06);
-  padding: 30px;
-  border-radius: 14px;
+.btn-primary{
+  background:var(--gold);
+  color:white;
 }
 
-.review-item strong {
-  display: block;
-  margin-top: 15px;
-  color: #C9A24D;
-}
-/* ===== TOP BAR ===== */
-.top-bar {
-  background: #0B1623;
-  color: #ffffff;
-  font-size: 14px;
-  text-align: center;
-  padding: 8px 10px;
+.btn-secondary{
+  border:2px solid white;
+  color:white;
 }
 
-/* ===== HEADER ===== */
-.header {
-  background: #0F1E2E;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+/* =====================
+   STATS
+===================== */
+.stats{
+  display:flex;
+  gap:40px;
+  margin-top:40px;
+  flex-wrap:wrap;
 }
 
-.header-inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 18px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.stat{
+  text-align:center;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
+.stat h3{
+  font-size:36px;
+  color:var(--gold);
 }
 
-.logo span {
-  color: #C9A24D;
+.stat span{
+  font-size:14px;
+  color:#ccc;
 }
 
-.nav a {
-  margin: 0 15px;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
+/* =====================
+   SECTIONS BASE
+===================== */
+section{
+  padding:110px 20px;
 }
 
-.nav a:hover {
-  color: #C9A24D;
+.container{
+  max-width:1200px;
+  margin:auto;
 }
 
-.header-call a {
-  background: #C9A24D;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-}
-/* ===== STICKY HEADER ===== */
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-.contact {
-  background: #ffffff;
-  color: #0F1E2E;
-  padding: 80px 20px;
-  text-align: center;
-}
-.footer {
-  background: #0F1E2E;
-  color: #aaa;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
+section h2{
+  text-align:center;
+  font-size:40px;
+  margin-bottom:60px;
 }
 
-  </style>
+/* =====================
+   SERVICES
+===================== */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
+}
+
+.service-card{
+  background:rgba(255,255,255,.05);
+  padding:40px;
+  border-radius:24px;
+  box-shadow:0 25px 50px rgba(0,0,0,.4);
+}
+
+.service-card h3{
+  color:var(--gold);
+  margin-bottom:14px;
+}
+
+/* =====================
+   EMERGENCY CTA
+===================== */
+.emergency{
+  background:linear-gradient(145deg,var(--gold),#b18a3b);
+  color:#0B1623;
+  text-align:center;
+}
+
+.emergency h2{margin-bottom:20px}
+
+.emergency a{
+  display:inline-block;
+  background:#0B1623;
+  color:white;
+  padding:20px 40px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* =====================
+   WHY CHOOSE US
+===================== */
+.why{
+  background:linear-gradient(180deg,#0B1623,var(--navy));
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:35px;
+}
+
+.why-box{
+  background:rgba(255,255,255,.06);
+  padding:35px;
+  border-radius:22px;
+}
+
+/* =====================
+   PROCESS
+===================== */
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+
+.process-step{
+  background:rgba(255,255,255,.04);
+  padding:30px;
+  border-radius:20px;
+}
+
+.process-step span{
+  font-size:32px;
+  color:var(--gold);
+}
+
+/* =====================
+   SERVICE AREAS
+===================== */
+.areas-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+  text-align:center;
+}
+
+.area{
+  background:rgba(255,255,255,.05);
+  padding:16px;
+  border-radius:14px;
+}
+
+/* =====================
+   REVIEWS
+===================== */
+.reviews-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:35px;
+}
+
+.review{
+  background:rgba(255,255,255,.06);
+  padding:35px;
+  border-radius:24px;
+}
+
+.review strong{
+  display:block;
+  margin-top:15px;
+  color:var(--gold);
+}
+
+/* =====================
+   FAQ
+===================== */
+.faq-item{
+  background:rgba(255,255,255,.05);
+  margin-bottom:15px;
+  border-radius:14px;
+  overflow:hidden;
+}
+
+.faq-question{
+  padding:18px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.faq-answer{
+  padding:0 18px;
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .3s ease;
+  color:#ddd;
+}
+
+/* =====================
+   CONTACT
+===================== */
+.contact{
+  background:white;
+  color:#0F1E2E;
+  text-align:center;
+}
+
+.contact a{
+  display:inline-block;
+  margin-top:30px;
+  background:var(--gold);
+  color:white;
+  padding:20px 40px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:18px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer{
+  background:#050A12;
+  color:#aaa;
+  text-align:center;
+  padding:35px 20px;
+  font-size:14px;
+}
+
+/* =====================
+   MOBILE
+===================== */
+@media(max-width:768px){
+  nav{display:none}
+  .hero h1{font-size:40px}
+  .hero-card{padding:60px 30px}
+}
+
+</style>
 </head>
+
 <body>
-<!-- TOP BAR -->
+
 <div class="top-bar">
-  ⭐ 4.9 Rating • 60+ Reviews • 24/7 Emergency Service • Athens, Ohio
+⭐ 4.9 Rating • 60+ Reviews • 24/7 Emergency Service • Athens, Ohio
 </div>
 
-<!-- HEADER -->
-<header class="header">
+<header>
   <div class="header-inner">
-
-    <div class="logo">
-      Precision <span>Plumbing</span>
-    </div>
-
-    <nav class="nav">
+    <div class="logo">Precision <span>Plumbing</span></div>
+    <nav>
       <a href="#services">Services</a>
-      <a href="#why">Why Choose Us</a>
+      <a href="#why">Why Us</a>
+      <a href="#areas">Service Areas</a>
       <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
     </nav>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-    <div class="header-call">
-      <a href="tel:+17408183941">📞 Call Now</a>
-    </div>
-
+    <a href="tel:+17408183941" class="header-call">Call Now</a>
   </div>
 </header>
 
+<section class="hero">
+  <div class="hero-card">
+    <div class="hero-badge">Emergency Calls Answered</div>
+    <h1>Plumbing Problems Solved<br><span>Fast & Professionally</span></h1>
+    <p>Trusted by Athens homeowners for emergency response, accurate diagnosis, and same-day plumbing repairs.</p>
+
+    <div class="hero-actions">
+      <a href="tel:+17408183941" class="btn-primary">Call Now</a>
+      <a href="https://wa.me/17408183941" class="btn-secondary">Request Callback</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><h3>60+</h3><span>5-Star Reviews</span></div>
+      <div class="stat"><h3>24/7</h3><span>Emergency Service</span></div>
+      <div class="stat"><h3>100%</h3><span>Satisfaction</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
   <div class="container">
-    <div class="badge">Emergency Calls Answered</div>
-
-    <h1>
-      Plumbing Problems Solved<br>
-      <span>Fast & Professionally</span>
-    </h1>
-
-    <p>
-      Trusted by Athens homeowners for emergency response,
-      accurate diagnosis, and same-day plumbing repairs.
-    </p>
-
-    <div class="buttons">
-      <a href="tel:+17408183941" class="call">Call Now for Immediate Service</a>
-      <a href="https://wa.me/17408183941?text=Hello%20I%20would%20like%20to%20request%20a%20callback" class="callback">
-  Request a Callback
-</a>
-
-    </div>
-
-    <p style="margin-top:40px;">
-      ⭐ 4.9 Rating | 60+ Verified Reviews<br>
-      Locally Owned • Licensed & Insured • 24/7 Emergency Service
-    </p>
-  </div>
-<section class="why" id="why">
-  <div class="why-container">
-
-    <h2>Why Athens Chooses Precision Plumbing</h2>
-
-    <div class="why-grid">
-
-      <div class="why-item">
-        <h3>We Show Up</h3>
-        <p>
-          When others delay or don’t respond, we answer — even on weekends.
-          Your emergency is our priority.
-        </p>
-      </div>
-
-      <div class="why-item">
-        <h3>We Diagnose Correctly</h3>
-        <p>
-          No guessing. No repeat visits.
-          Just accurate solutions done right the first time.
-        </p>
-      </div>
-
-      <div class="why-item">
-        <h3>We Fix It Fast</h3>
-        <p>
-          Many problems are solved the same day.
-          We respect your time as much as you do.
-        </p>
-      </div>
-
-      <div class="why-item">
-        <h3>We Communicate Clearly</h3>
-        <p>
-          You always know what’s happening and why.
-          No technical jargon, just honest answers.
-        </p>
-      </div>
-
-      <div class="why-item">
-        <h3>We Respect Your Home</h3>
-        <p>
-          Clean work. Professional behavior.
-          No shortcuts — ever.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-<section class="services" id="services">
-  <div class="services-container">
-
     <h2>Our Plumbing Services</h2>
-    <p class="services-sub">
-      If it involves water, pipes, or pressure — we fix it.
-    </p>
-
     <div class="services-grid">
-
-      <div class="service-item">
-        <h3>Emergency Plumbing</h3>
-        <p>24/7 response for leaks, clogs, and urgent plumbing issues.</p>
-      </div>
-
-      <div class="service-item">
-        <h3>Water Heaters</h3>
-        <p>Repair and replacement for traditional and tankless systems.</p>
-      </div>
-
-      <div class="service-item">
-        <h3>Drain Cleaning</h3>
-        <p>Fast, effective drain cleaning with no mess left behind.</p>
-      </div>
-
-      <div class="service-item">
-        <h3>Residential Plumbing</h3>
-        <p>Bathrooms, kitchens, leaks, fixtures, and general repairs.</p>
-      </div>
-
+      <div class="service-card"><h3>Emergency Plumbing</h3><p>Fast response for urgent issues.</p></div>
+      <div class="service-card"><h3>Water Heaters</h3><p>Repair & replacement.</p></div>
+      <div class="service-card"><h3>Drain Cleaning</h3><p>Clogs removed quickly.</p></div>
+      <div class="service-card"><h3>Residential Repairs</h3><p>Kitchens, bathrooms & leaks.</p></div>
     </div>
-
   </div>
 </section>
-<section class="reviews" id="reviews">
-  <div class="reviews-container">
 
-    <h2>What Our Customers Say</h2>
+<section class="emergency">
+  <h2>Plumbing Emergency?</h2>
+  <a href="tel:+17408183941">Call (740) 818-3941 Now</a>
+</section>
 
+<section class="why" id="why">
+  <div class="container">
+    <h2>Why Choose Precision Plumbing</h2>
+    <div class="why-grid">
+      <div class="why-box"><h3>We Show Up</h3><p>Even nights & weekends.</p></div>
+      <div class="why-box"><h3>Correct Diagnosis</h3><p>Done right the first time.</p></div>
+      <div class="why-box"><h3>Fast Repairs</h3><p>Same-day solutions.</p></div>
+      <div class="why-box"><h3>Respect Your Home</h3><p>Clean, professional work.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Our Process</h2>
+    <div class="process-grid">
+      <div class="process-step"><span>1</span><p>Call or message us</p></div>
+      <div class="process-step"><span>2</span><p>Diagnosis & estimate</p></div>
+      <div class="process-step"><span>3</span><p>Fast professional repair</p></div>
+      <div class="process-step"><span>4</span><p>Problem solved</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="container">
+    <h2>Service Areas</h2>
+    <div class="areas-list">
+      <div class="area">Athens</div>
+      <div class="area">Albany</div>
+      <div class="area">The Plains</div>
+      <div class="area">Nelsonville</div>
+      <div class="area">Chauncey</div>
+      <div class="area">Coolville</div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <h2>Customer Reviews</h2>
     <div class="reviews-grid">
+      <div class="review"><p>“They showed up when no one else did.”</p><strong>— Tom S.</strong></div>
+      <div class="review"><p>“Professional, honest, and fast.”</p><strong>— A.W.</strong></div>
+      <div class="review"><p>“Water heater replaced same day.”</p><strong>— Todd W.</strong></div>
+    </div>
+  </div>
+</section>
 
-      <div class="review-item">
-        <p>
-          “They showed up after another company did nothing.
-          Diagnosed the issue quickly and fixed it the same day.”
-        </p>
-        <strong>— Tom S.</strong>
-      </div>
+<section>
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
 
-      <div class="review-item">
-        <p>
-          “Professional, fast, and honest.
-          Emergency call on a weekend and everything worked again.”
-        </p>
-        <strong>— A.W.</strong>
-      </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you offer emergency service?</div>
+      <div class="faq-answer"><p>Yes, we provide 24/7 emergency plumbing.</p></div>
+    </div>
 
-      <div class="review-item">
-        <p>
-          “Justin did a spectacular job replacing our water heater.
-          Highly recommended.”
-        </p>
-        <strong>— Todd W.</strong>
-      </div>
+    <div class="faq-item">
+      <div class="faq-question">Are you licensed and insured?</div>
+      <div class="faq-answer"><p>Yes, fully licensed and insured.</p></div>
+    </div>
 
+    <div class="faq-item">
+      <div class="faq-question">Do you provide estimates?</div>
+      <div class="faq-answer"><p>Yes, clear and upfront pricing.</p></div>
     </div>
 
   </div>
 </section>
-<script>
-  function toggleMenu() {
-    const nav = document.querySelector('.nav');
-    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-  }
-</script>
-<section id="contact" class="contact">
-  <h2>Contact Precision Plumbing</h2>
-  <p>Athens, Ohio</p>
-  <a href="tel:+17408183941" class="call">
-    📞 Call (740) 818-3941
-  </a>
+
+<section class="contact" id="contact">
+  <h2>Need Plumbing Help Now?</h2>
+  <p>Serving Athens, Ohio</p>
+  <a href="tel:+17408183941">📞 Call (740) 818-3941</a>
 </section>
-<footer class="footer">
-  © 2026 Precision Plumbing of Athens Ohio LLC<br>
-  Athens, Ohio • Licensed & Insured
+
+<footer>
+© 2026 Precision Plumbing of Athens Ohio LLC<br>
+Licensed • Insured • Athens, Ohio
 </footer>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const a=q.nextElementSibling;
+    a.style.maxHeight=a.style.maxHeight?null:a.scrollHeight+"px";
+  });
+});
+</script>
 
 </body>
 </html>
