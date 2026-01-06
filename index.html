@@ -168,10 +168,88 @@
   margin-top: 15px;
   color: #C9A24D;
 }
+/* ===== TOP BAR ===== */
+.top-bar {
+  background: #0B1623;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  padding: 8px 10px;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: #0F1E2E;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #C9A24D;
+}
+
+.nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #C9A24D;
+}
+
+.header-call a {
+  background: #C9A24D;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
   </style>
 </head>
 <body>
+<!-- TOP BAR -->
+<div class="top-bar">
+  ⭐ 4.9 Rating • 60+ Reviews • 24/7 Emergency Service • Athens, Ohio
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+
+    <div class="logo">
+      Precision <span>Plumbing</span>
+    </div>
+
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#why">Why Choose Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-call">
+      <a href="tel:+17408183941">📞 Call Now</a>
+    </div>
+
+  </div>
+</header>
 
   <div class="container">
     <div class="badge">Emergency Calls Answered</div>
@@ -199,7 +277,7 @@
       Locally Owned • Licensed & Insured • 24/7 Emergency Service
     </p>
   </div>
-<section class="why">
+<section class="why" id="why">
   <div class="why-container">
 
     <h2>Why Athens Chooses Precision Plumbing</h2>
@@ -250,7 +328,7 @@
 
   </div>
 </section>
-<section class="services">
+<section class="services" id="services">
   <div class="services-container">
 
     <h2>Our Plumbing Services</h2>
@@ -284,7 +362,7 @@
 
   </div>
 </section>
-<section class="reviews">
+<section class="reviews" id="reviews">
   <div class="reviews-container">
 
     <h2>What Our Customers Say</h2>
